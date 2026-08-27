@@ -56,7 +56,7 @@ app.listen(PORT, () => {
     log.backend(`App started listening on port ${PORT}`);
 
     require("./xmpp/xmpp.js");
-    require("./DiscordBot");
+    if (config.discord && config.discord.bot_token) require("./DiscordBot");
 }).on("error", async (err) => {
     if (err.code == "EADDRINUSE") {
         log.error(`Port ${PORT} is already in use!\nClosing in 3 seconds...`);
@@ -65,7 +65,6 @@ app.listen(PORT, () => {
     } else throw err;
 });
 
-// if endpoint not found, return this error
 app.use((req, res, next) => {
     error.createError(
         "errors.com.epicgames.common.not_found", 
