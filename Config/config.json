@@ -4,7 +4,7 @@
         "bot_token": ""
     },
     "mongodb": {
-        "database": "mongodb+srv://fryadmin:Mb1lL7nMLHZe0r3Q@cluster0.2p6q6f5.mongodb.net/lawindb?appName=Cluster0"
+        "database": "mongodb+srv://FryDb2025:dB8mBhcBvM9Yb8@cluster0.2p6q6f5.mongodb.net/lawindb?appName=Cluster0"
     },
     "chat": {
         "//": "Disabling global chat can help the server to perform faster as less resources are used.",
